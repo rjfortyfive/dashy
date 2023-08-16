@@ -8,7 +8,8 @@ services:
     volumes:
       - /home/rjfortyfive/dashy/config/conf.yml:/app/public/conf.yml
  #     - /home/rjfortyfive/dashy/item-icons:/app/public/item-icons
-
+    networks:
+      - proxy
     # Set port that web service will be served on. Keep container port as 80
     ports:
       - 4000:80
@@ -30,3 +31,6 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+networks:
+  proxy:
+    external: true
