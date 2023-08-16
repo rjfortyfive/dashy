@@ -1,0 +1,4 @@
+/config/*
+/item-icons/
+
+!/config/conf.yml
